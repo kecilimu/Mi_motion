@@ -1,4 +1,4 @@
-name: 刷步数
+name: Mi Motion Project
 
 on:
   push:
@@ -19,12 +19,12 @@ jobs:
         python-version: ['3.x']
     steps:
       - uses: actions/checkout@v2
-      - name: 初始化Python
+      - name: Install Python
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
           architecture: x64
-      - name: 开始
+      - name: Object Start
         run: |
           pip install requests
           pmode='${{ secrets.PMODE }}'
